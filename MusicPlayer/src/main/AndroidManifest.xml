@@ -25,6 +25,17 @@
 
         <activity android:name=".ui.activity.SettingActivity"/>
         <activity android:name=".ui.activity.AboutActivity"/>
+        <activity android:name=".ui.activity.JiecaoVideoPlayerActivity"
+                  android:configChanges="screenSize|orientation|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="rtsp"/>
+            </intent-filter>
+        </activity>
 
     </application>
 

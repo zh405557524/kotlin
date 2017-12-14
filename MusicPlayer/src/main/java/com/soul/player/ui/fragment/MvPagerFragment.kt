@@ -1,5 +1,6 @@
 package com.soul.player.ui.fragment
 
+import android.content.Intent
 import com.itheima.player.model.bean.MvPagerBean
 import com.itheima.player.model.bean.VideosBean
 import com.soul.player.adapter.MvListAdapter
@@ -8,6 +9,7 @@ import com.soul.player.base.BaseListFragment
 import com.soul.player.base.BaseListPresenter
 import com.soul.player.model.VideoPlayBean
 import com.soul.player.presenter.impl.MvListPresenterImpl
+import com.soul.player.ui.activity.JiecaoVideoPlayerActivity
 import com.soul.player.view.MvItemView
 import com.soul.player.view.MvListView
 
@@ -21,7 +23,7 @@ class MvPagerFragment : BaseListFragment<MvPagerBean, VideosBean, MvItemView>(),
 
     var code: String? = null
 
-    override fun  init() {
+    override fun init() {
         code = arguments.getString("args")
     }
 
@@ -43,7 +45,9 @@ class MvPagerFragment : BaseListFragment<MvPagerBean, VideosBean, MvItemView>(),
         adapter.setMyListener {
             val videoPlayBean = VideoPlayBean(it.id, it.title, it.url)
             //跳转到视频播放界面
-//            startActivity<JiecaoVideoPlayerActivity>("item" to videoPlayBean)
+            val intent = Intent(activity, JiecaoVideoPlayerActivity::class.java)
+            intent.putExtra("item", videoPlayBean)
+            startActivity(intent)
         }
     }
 }

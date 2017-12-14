@@ -46,6 +46,7 @@ abstract class BaseListAdapter<T, V : View> : RecyclerView.Adapter<BaseListAdapt
             val data = list.get(position)
             val itemView = holder?.itemView as V
             refreshItemView(itemView, data)
+            itemView.setOnClickListener { listener?.let { it(data) } }
         }
     }
 
