@@ -24,7 +24,17 @@ class MainActivity : BaseActivity(), ToolBarManager {
         //设置tab 切换
         bottomBar.setOnTabSelectListener {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fl_content, FragmentUtil.fragmentUtil.getFragment(it), it.toString())
+            val data = FragmentUtil.fragmentUtil.data
+            for ((key, value) in data) {
+                transaction.hide(value)
+            }
+            val fragment = FragmentUtil.fragmentUtil.getFragment(it)
+            if (fragment?.isAdded!!) {
+                transaction.show(fragment)
+            } else {
+                transaction.add(R.id.fl_content, fragment, it.toString())
+            }
+
             transaction.commit()
         }
     }

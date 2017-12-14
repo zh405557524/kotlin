@@ -22,6 +22,8 @@ class FragmentUtil private constructor() {//私有化构造方法
     val vBangFragment by lazy { VBFragment() }
     val yueDanFragment by lazy { YueDanFragment() }
 
+    val data = HashMap<Int, BaseFragment>()
+
     companion object {
         val fragmentUtil by lazy { FragmentUtil() }
     }
@@ -30,13 +32,29 @@ class FragmentUtil private constructor() {//私有化构造方法
     根据tabId 获取fragment
      */
     fun getFragment(tabId: Int): BaseFragment? {
-        when (tabId) {
-            R.id.tab_home ->return homeFragment
-            R.id.tab_mv ->return mvFragment
-            R.id.tab_vb ->return vBangFragment
-            R.id.tab_yd ->return yueDanFragment
+        var fragment = data.get(tabId);
+        if (fragment != null) {
+            return fragment
         }
-        return null
+        when (tabId) {
+            R.id.tab_home -> {
+                data.put(tabId, homeFragment)
+                fragment = homeFragment
+            }
+            R.id.tab_mv -> {
+                data.put(tabId, mvFragment)
+                fragment = mvFragment
+            }
+            R.id.tab_vb -> {
+                data.put(tabId, vBangFragment)
+                fragment = vBangFragment
+            }
+            R.id.tab_yd -> {
+                data.put(tabId, yueDanFragment)
+                fragment = yueDanFragment
+            }
+        }
+        return fragment
     }
 
 

@@ -69,6 +69,12 @@ abstract class BaseListAdapter<T, V : View> : RecyclerView.Adapter<BaseListAdapt
         }
     }
 
+    //定义函数类型变量
+    var listener: ((itemBean: T) -> Unit)? = null
+
+    fun setMyListener(listener: (itemBean: T) -> Unit) {
+        this.listener = listener
+    }
 
     class BaseHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
