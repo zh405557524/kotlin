@@ -22,7 +22,7 @@ abstract class BaseFragment : Fragment(), AnkoLogger {
         init()
     }
 
-    open protected fun  init() {
+    open protected fun init() {
 
     }
 
