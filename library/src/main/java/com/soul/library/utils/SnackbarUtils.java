@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.support.annotation.ColorInt;
 import android.support.design.widget.BaseTransientBottomBar;

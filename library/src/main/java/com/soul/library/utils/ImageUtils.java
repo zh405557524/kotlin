@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.annotation.TargetApi;
 import android.content.Context;

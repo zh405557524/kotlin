@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;

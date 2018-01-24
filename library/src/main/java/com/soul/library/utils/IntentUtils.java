@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.content.ComponentName;
 import android.content.Context;

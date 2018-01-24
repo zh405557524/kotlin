@@ -1,6 +1,6 @@
 package com.soul.library.http
 
-import com.soul.library.utils.UIUtils
+import UIUtils
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit
  */
 open class RetrofitFactory {
 
-    var client: OkHttpClient.Builder? = null
+    private var client: OkHttpClient.Builder? = null
 
     /**
      * 静态方法区
@@ -59,7 +59,7 @@ open class RetrofitFactory {
      * @param baseUrl 服务器地址
      * @param interceptor
      */
-    open fun createRetrofit(baseUrl: String, vararg interceptor: Interceptor): Retrofit {
+    open fun createRetrofit(baseUrl: String, vararg interceptor: Interceptor?): Retrofit {
         for (i in interceptor) {
             client?.addInterceptor(i)
         }

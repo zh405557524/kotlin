@@ -17,7 +17,7 @@
  * along with Meizhi.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.soul.library.utils;
+package
 
 import android.content.Context;
 import android.text.SpannableString;

@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,8 +13,8 @@ import javax.crypto.Cipher;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
-import static com.soul.library.utils.ConvertUtils.bytes2HexString;
-import static com.soul.library.utils.ConvertUtils.hexString2Bytes;
+import static ConvertUtils.bytes2HexString;
+import static ConvertUtils.hexString2Bytes;
 
 
 /**

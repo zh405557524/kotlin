@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import java.io.Closeable;
 import java.io.IOException;

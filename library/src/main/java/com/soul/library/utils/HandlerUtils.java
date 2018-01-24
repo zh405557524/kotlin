@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.os.Handler;
 import android.os.Message;

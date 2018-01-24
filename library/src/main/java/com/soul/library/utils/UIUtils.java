@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -36,6 +36,7 @@ public class UIUtils {
         sHandler = handler;
         // 3 的到一个主线程 id
         sMainThreadId = Process.myTid();
+        Utils.init(context);
     }
 
     /**

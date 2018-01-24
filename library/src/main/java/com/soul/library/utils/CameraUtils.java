@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.app.Activity;
 import android.content.ContentResolver;

@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.annotation.SuppressLint;
 import android.content.Context;

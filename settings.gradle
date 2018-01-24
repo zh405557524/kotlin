@@ -1,1 +1,1 @@
-include ':MusicPlayer', ':library'
+include ':MusicPlayer', ':library', ':substantial'

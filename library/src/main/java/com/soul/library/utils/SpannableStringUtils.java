@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.graphics.Bitmap;
 import android.graphics.BlurMaskFilter;

@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -16,7 +16,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
-import static com.soul.library.utils.ConstUtils.KB;
+import static ConstUtils.KB;
 
 /**
  * <pre>

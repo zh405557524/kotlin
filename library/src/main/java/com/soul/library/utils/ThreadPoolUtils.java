@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import java.util.Collection;
 import java.util.List;

@@ -1,11 +1,9 @@
-package com.soul.library.utils;
+package
 
 
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
-
-import com.soul.library.BaseApplication;
 
 /**
  * Toast 的封装类
@@ -26,11 +24,11 @@ public class ToastUtil {
      */
     public static void showShort(final String info) {
         if (StringUtils.isNotEmpty(info)) {
-            BaseApplication.getHandler().post(new Runnable() {
+            UIUtils.getHandler().post(new Runnable() {
                 @Override
                 public void run() {
                     if (null == mToast) {
-                        mToast = Toast.makeText(BaseApplication.getContext(), info, Toast.LENGTH_SHORT);
+                        mToast = Toast.makeText(UIUtils.getContext(), info, Toast.LENGTH_SHORT);
                     }
                     mToast.setDuration(Toast.LENGTH_SHORT);
                     mToast.setText(info);
@@ -48,7 +46,7 @@ public class ToastUtil {
     public static void showLong(String info) {
         if (StringUtils.isNotEmpty(info)) {
             if (null == mToast) {
-                mToast = Toast.makeText(BaseApplication.getContext(), info, Toast.LENGTH_LONG);
+                mToast = Toast.makeText(UIUtils.getContext(), info, Toast.LENGTH_LONG);
             }
             mToast.setDuration(Toast.LENGTH_LONG);
             mToast.setText(info);
@@ -66,7 +64,7 @@ public class ToastUtil {
     public static void showShort(String info, int offsetx, int offsetY) {
         if (StringUtils.isNotEmpty(info)) {
             if (null == mToast) {
-                mToast = Toast.makeText(BaseApplication.getContext(), info, Toast.LENGTH_SHORT);
+                mToast = Toast.makeText(UIUtils.getContext(), info, Toast.LENGTH_SHORT);
             }
             mToast.setDuration(Toast.LENGTH_SHORT);
             mToast.setText(info);
@@ -83,7 +81,7 @@ public class ToastUtil {
     public static void showShort(View view, int offsetx) {
         if (view != null) {
             if (null == mToast) {
-                mToast = Toast.makeText(BaseApplication.getContext(), "", Toast.LENGTH_SHORT);
+                mToast = Toast.makeText(UIUtils.getContext(), "", Toast.LENGTH_SHORT);
             }
             mToast.setDuration(Toast.LENGTH_SHORT);
             mToast.setView(view);

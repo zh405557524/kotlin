@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.os.Build;
 import android.text.Html;

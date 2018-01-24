@@ -1,4 +1,4 @@
-package com.soul.library.utils;
+package
 
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
