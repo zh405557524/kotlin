@@ -1,6 +1,9 @@
 package com.soul.substantial
 
-import com.soul.library.base.BaseActivity
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
+import android.support.v4.app.FragmentStatePagerAdapter
+import com.soul.substantial.base.BaseActivity
 
 
 /**
@@ -21,4 +24,32 @@ class MainActivity : BaseActivity() {
 
     }
 
+
+    private inner class MainFragmentAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
+
+        override fun getItem(position: Int): Fragment? {
+            return null
+        }
+
+        override fun getCount(): Int {
+            return 0
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

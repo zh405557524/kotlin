@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Substantial</string>
+    <string name="app_name">随听</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

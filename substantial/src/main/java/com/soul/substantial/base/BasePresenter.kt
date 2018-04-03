@@ -1,4 +1,4 @@
-package com.soul.library.base
+package com.soul.substantial.base
 
 import com.soul.library.mvp.IModel
 import com.soul.library.mvp.IPresenter

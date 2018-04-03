@@ -44,4 +44,8 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     //系统工具
     compile 'com.android.support:design:26.1.0'
+    //权限
+    compile 'com.yanzhenjie:permission:1.1.2'
+
+    compile 'com.litesuits:orm:1.0.0'
 }

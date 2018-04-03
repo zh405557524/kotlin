@@ -1,5 +1,6 @@
 package com.soul.library.http
 
+import com.soul.substantial.http.MusicApiService
 import com.soul.substantial.utils.UIUtils
 import okhttp3.Cache
 import okhttp3.Interceptor
@@ -61,13 +62,22 @@ open class RetrofitFactory {
      */
     open fun createRetrofit(baseUrl: String, vararg interceptor: Interceptor?): Retrofit {
         for (i in interceptor) {
-            client?.addInterceptor(i)
+            if (i != null) {
+                client?.addInterceptor(i)
+            }
         }
         return Retrofit
                 .Builder()
                 .baseUrl(baseUrl)
                 .client(client?.build()!!)
                 .build()
+    }
+
+    /**
+     * 创建音乐api
+     */
+    open fun getMusicApiService(): MusicApiService {
+        return createRetrofit("", null).create(MusicApiService::class.java)
     }
 
 }

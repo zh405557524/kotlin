@@ -1,4 +1,4 @@
-package com.soul.library.base
+package com.soul.substantial.base
 
 import android.os.Bundle
 import com.soul.library.mvp.IModel

@@ -14,22 +14,21 @@ import java.util.Map;
  *     desc  : SP相关工具类
  * </pre>
  */
-public class SPUtils{
+public class SPUtils {
 
     private SharedPreferences sp;
     private SharedPreferences.Editor editor;
     /**
      * 保存在手机里面的文件名
      */
-    public static final String FILE_NAME ="123";
+    public static final String FILE_NAME = "spConfig";
+
     /**
      * SPUtils构造函数
      * <p>在Application中初始化</p>
-     *
-     * @param spName  spName
      */
-    public SPUtils(String spName) {
-        sp = Utils.getContext().getSharedPreferences(spName, Context.MODE_PRIVATE);
+    public SPUtils() {
+        sp = Utils.getContext().getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
         editor = sp.edit();
         editor.apply();
     }
