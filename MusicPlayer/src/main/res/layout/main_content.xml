@@ -7,7 +7,7 @@
     android:background="@color/primary"
     android:orientation="vertical">
 
-    <com.soul.substantial.util.StatusBarView
+    <com.soul.music.util.StatusBarView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -62,7 +62,7 @@
 
 
     <!--播放器-->
-    <com.soul.substantial.ui.player.PlayerBarView
+    <com.soul.music.ui.player.PlayerBarView
         android:id="@+id/pb_player"
         android:layout_width="match_parent"
         android:layout_height="@dimen/y156"

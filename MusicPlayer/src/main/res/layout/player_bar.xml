@@ -37,7 +37,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <com.soul.substantial.widget.SquareWrapWImageView
+            <com.soul.music.widget.SquareWrapWImageView
                 android:id="@+id/img_album"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -75,7 +75,7 @@
 
             </LinearLayout>
 
-            <com.soul.substantial.widget.CheckableImageView
+            <com.soul.music.widget.CheckableImageView
                 android:id="@+id/btn_play"
                 style="@style/CommonButton"
                 android:layout_width="48dp"
