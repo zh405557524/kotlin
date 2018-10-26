@@ -1,5 +1,6 @@
 package com.soul.substantial.base
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -21,7 +22,7 @@ abstract class BaseFragment : Fragment(), AnkoLogger, FragmentUserVisibleControl
     val STATE_ERROR = 1            // 错误
     val STATE_EMPTY = 2            // 空
     val STATE_SUCCESS = 3            // 成功
-
+    lateinit var mContext: Context
     protected var mCurState = STATE_NONE
 
     /**
@@ -51,6 +52,7 @@ abstract class BaseFragment : Fragment(), AnkoLogger, FragmentUserVisibleControl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mContext = activity
         initVariable()
     }
 

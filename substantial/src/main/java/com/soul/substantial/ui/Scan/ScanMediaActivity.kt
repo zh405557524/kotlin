@@ -85,4 +85,8 @@ class ScanMediaActivity : BaseActivity(), View.OnClickListener {
 
     }
 
+    override fun isNeedStatusView(): Boolean {
+        return false
+    }
+
 }

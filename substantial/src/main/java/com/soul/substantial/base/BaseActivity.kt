@@ -105,6 +105,9 @@ abstract class BaseActivity : AppCompatActivity(), AnkoLogger {
         }
     }
 
+    /**
+     * 是否需要显示标题栏
+     */
     open fun isNeedStatusView(): Boolean {
         return true
     }

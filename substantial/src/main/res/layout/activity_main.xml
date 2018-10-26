@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.soul.substantial.MainActivity">
 
-    <!--标题-->
-    <LinearLayout android:layout_width="wrap_content"
-                  android:layout_height="wrap_content">
+    <include layout="@layout/main_content"/>
 
-    </LinearLayout>
+    <include layout="@layout/main_left"/>
 
-    <!--内容-->
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-
-    <!--播放器-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </LinearLayout>
-
-
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>

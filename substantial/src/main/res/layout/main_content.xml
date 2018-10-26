@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical">
+
+    <com.soul.substantial.util.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--内容-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!--标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y144">
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="@dimen/y144"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x40"
+                android:scaleType="center"
+                android:src="@drawable/actionbar_menu"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/song_tabLayout"
+                style="@style/MyCustomTabLayout"
+                android:layout_width="@dimen/x660"
+                android:layout_height="@dimen/y144"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                app:tabMode="scrollable"/>
+
+            <ImageView
+                android:layout_width="@dimen/y144"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x40"
+                android:scaleType="center"
+                android:src="@drawable/search_icon"/>
+
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
+    <!--播放器-->
+    <com.soul.substantial.ui.player.PlayerBarView
+        android:id="@+id/pb_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y156"
+        android:layout_weight="0"/>
+
+</LinearLayout>
